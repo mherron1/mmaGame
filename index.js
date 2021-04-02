@@ -1,5 +1,19 @@
 let score = 0;
 
+winText = [
+  "Hey Dana! sixty g's baby!!",
+  "I'm not surprised M***** F*****!",
+  "Conceive, believe, achieve",
+  "You are Michael Jordan-esque in your UFC knowledge!",
+];
+
+loseText = [
+  "You absolutely suck.",
+  "I am not impressed with your performance.",
+  "Your brain is a balloon!",
+  "This number one bullshit result.",
+];
+
 function getBout() {
   let num = Math.floor(Math.random() * (array.length - 1));
 
@@ -7,7 +21,6 @@ function getBout() {
 }
 
 function newGame() {
-  document.querySelector("#instructions").style.display = "none";
   document.querySelector("#lose").style.display = "none";
   document.querySelector("#win").style.display = "none";
   document.querySelector("#container").style.display = "block";
@@ -54,6 +67,9 @@ function plus() {
     document.querySelector("#container").style.display = "none";
     document.querySelector("#button").style.display = "block";
     score = 0;
+    document.querySelector("#win").innerHTML = `
+    <div>Congratulations!</div>
+    <div>${winText[Math.floor(Math.random() * 4)]}<div>`;
     document.querySelector("#win").style.display = "block";
   }
 }
@@ -68,12 +84,15 @@ function minus() {
 
   document.querySelector("#score").textContent = score;
   newGame();
-  if (score < -9) {
+  if (score < -4) {
     document.querySelector("#score").style.display = "none";
     document.querySelector("#fighters").style.visibility = "hidden";
     document.querySelector("#container").style.display = "none";
     document.querySelector("#button").style.display = "block";
     score = 0;
+    document.querySelector("#lose").innerHTML = `
+    <div>Game Over!</div>
+    <div>${loseText[Math.floor(Math.random() * 4)]}<div>`;
     document.querySelector("#lose").style.display = "block";
   }
 }
