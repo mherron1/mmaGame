@@ -37,9 +37,9 @@ h1 {
   transform: translateY(0px);
 }
 
-@media only screen and (max-height: 568px) {
+@media only screen and (max-height: 675px) {
   #container {
-    margin-top: px;
+    margin-top: 30px;
   }
 }
 
@@ -60,13 +60,12 @@ h1 {
   color: black;
   max-width: 43%;
   max-width: 150px;
-  background-color: rgb(241, 241, 241);
-  border: 2px solid black;
+  background-color: rgb(230, 230, 230);
   transform: translateY(0px);
   padding: 5px;
 }
 .items:hover {
-  background-color: rgb(197, 232, 255);
+  background-color: rgb(218, 218, 218);
 }
 
 #winner {
@@ -130,7 +129,7 @@ h1 {
   top: 45%;
   left: 80%;
   transform: translateX(-50%);
-  color: rgba(255, 0, 0, 0.6);
+  color: rgba(255, 0, 0, 0.8);
   display: none;
 }
 
@@ -140,7 +139,7 @@ h1 {
   top: 45%;
   left: 80%;
   transform: translateX(-50%);
-  color: rgba(79, 187, 115, 0.6);
+  color: rgba(79, 187, 115, 0.8);
   display: none;
 }
 
@@ -170,5 +169,30 @@ h1 {
   text-align: center;
   margin: auto;
   width: 250px;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 500px) {
+  h1 {
+    font-size: 50px;
+  }
+  #winner {
+    font-size: 25px;
+    padding: 10px;
+  }
+  #loser {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .items {
+    width: 250px;
+    margin: 10px;
+  }
+  #container {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+  #instructions {
+    font-size: 20px;
+  }
 }
