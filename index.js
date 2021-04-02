@@ -11,7 +11,7 @@ winText = [
 
 loseText = [
   "You absolutely suck.",
-  "I am not impressed with your performance.",
+  "I am not impressed with by performance.",
   "Your finger was a balloooon!",
   "This number one bullshit.",
 ];
