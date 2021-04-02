@@ -97,8 +97,9 @@ h1 {
 
 @media only screen and (max-width: 600px) {
   #score {
-    background-color: #151515;
-    border: 1px solid white;
+    background-color: #181818;
+    color: silver;
+
     width: 150px;
     height: 150px;
     margin: 50px auto;
@@ -194,5 +195,8 @@ h1 {
   }
   #instructions {
     font-size: 20px;
+  }
+  #score {
+    color: black;
   }
 }

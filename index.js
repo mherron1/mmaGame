@@ -12,8 +12,8 @@ winText = [
 loseText = [
   "You absolutely suck.",
   "I am not impressed with your performance.",
-  "Your brain is a balloon!",
-  "This number one bullshit result.",
+  "Your finger was a balloooon!",
+  "This number one bullshit.",
 ];
 
 function getBout() {
