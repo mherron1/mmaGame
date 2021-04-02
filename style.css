@@ -1,0 +1,85 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+}
+
+#container {
+  margin-top: 25%;
+  font-size: 30px;
+  text-align: center;
+}
+
+#fighters {
+  margin: auto;
+  max-width: 400px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  left: 0;
+}
+
+.items {
+  flex-grow: 1;
+  max-width: 43%;
+  max-width: 150px;
+}
+
+#winner {
+  background-color: silver;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+#loser {
+  background-color: silver;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+#winner:hover {
+  cursor: pointer;
+}
+
+#loser:hover {
+  cursor: pointer;
+}
+
+#score {
+  font-size: 175px;
+  text-align: center;
+  margin-top: 20%;
+  display: none;
+}
+
+#button {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+#wrong {
+  font-size: 300px;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 0, 0, 0.3);
+  display: none;
+}
+
+#right {
+  font-size: 300px;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(79, 187, 115, 0.3);
+  display: none;
+}
