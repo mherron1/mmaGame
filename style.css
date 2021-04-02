@@ -156,7 +156,6 @@ h1 {
 
 #lose {
   text-align: center;
-  color: rgb(230, 227, 103);
   position: fixed;
   width: 100%;
   font-size: 25px;
@@ -198,6 +197,13 @@ h1 {
     font-size: 20px;
   }
   #score {
+    color: black;
+  }
+  #win {
+    color: black;
+  }
+
+  #lose {
     color: black;
   }
 }

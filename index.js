@@ -1,7 +1,5 @@
 let score = 0;
 
-console.log(array.length);
-
 winText = [
   "Hey Dana! sixty g's baby!!",
   "I'm not surprised M***** F*****!",
