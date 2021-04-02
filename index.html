@@ -11,10 +11,27 @@
 </head>
 <body>
 
-    <div id="some_div"></div>
+    <center><h1>Casual Detector</h3></center>
+
+    <div id="instructions">
+        <div>Select the fight winner</div>
+        <br>
+        <div>+10 to win</div>
+        <div>-10 = confirmed casual</div>
+    </div>
 
 
-    <div id="score">0</div>
+    <div id="right">+1</div>
+    <div id="wrong">-2</div>
+    <div id="lose">You have been...DETECTED</div>
+    <div id="win">
+        <div>Congratulations!</div>
+        <div>You are</div>
+        <div>Michael Jordan-esque!</div>
+    </div>
+
+
+    <div id="score"></div>
 
     <div id = "container">
     </div>
@@ -24,7 +41,7 @@
        <div id="loser" class = "items" onclick="minus()"></div>
     </div>
 
-    <button id="button" onclick="newGame()">Begin Game</button>
+    <button id="button" onclick="newGame()">New Game</button>
     
 </body>
 </html>

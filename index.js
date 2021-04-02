@@ -7,6 +7,12 @@ function getBout() {
 }
 
 function newGame() {
+  document.querySelector("#instructions").style.display = "none";
+  document.querySelector("#lose").style.display = "none";
+  document.querySelector("#win").style.display = "none";
+  document.querySelector("#container").style.display = "block";
+  document.querySelector("#score").textContent = score;
+  document.querySelector("#fighters").style.visibility = "visible";
   document.querySelector("#score").style.display = "block";
   document.querySelector("#button").style.display = "none";
   let container = document.querySelector("#container");
@@ -35,13 +41,39 @@ function newGame() {
 
 function plus() {
   score++;
+  let right = document.querySelector("#right");
+  right.style.display = "block";
+  setTimeout(() => {
+    right.style.display = "none";
+  }, 400);
   document.querySelector("#score").textContent = score;
   newGame();
-  document.querySelector("#score").style.color = "green";
+  if (score > 9) {
+    document.querySelector("#score").style.display = "none";
+    document.querySelector("#fighters").style.visibility = "hidden";
+    document.querySelector("#container").style.display = "none";
+    document.querySelector("#button").style.display = "block";
+    score = 0;
+    document.querySelector("#win").style.display = "block";
+  }
 }
 function minus() {
   score--;
+  score--;
+  let wrong = document.querySelector("#wrong");
+  wrong.style.display = "block";
+  setTimeout(() => {
+    wrong.style.display = "none";
+  }, 400);
+
   document.querySelector("#score").textContent = score;
   newGame();
-  document.querySelector("#score").style.color = "red";
+  if (score < -9) {
+    document.querySelector("#score").style.display = "none";
+    document.querySelector("#fighters").style.visibility = "hidden";
+    document.querySelector("#container").style.display = "none";
+    document.querySelector("#button").style.display = "block";
+    score = 0;
+    document.querySelector("#lose").style.display = "block";
+  }
 }
