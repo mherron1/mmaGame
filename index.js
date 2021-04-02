@@ -8,6 +8,7 @@ function getBout() {
 
 function newGame() {
   document.querySelector("#score").style.display = "block";
+  document.querySelector("#button").style.display = "none";
   let container = document.querySelector("#container");
   container.innerHTML = "";
 
@@ -36,17 +37,11 @@ function plus() {
   score++;
   document.querySelector("#score").textContent = score;
   newGame();
-  document.querySelector("#right").style.display = "block";
-  setTimeout(() => {
-    document.querySelector("#right").style.display = "none";
-  }, 200);
+  document.querySelector("#score").style.color = "green";
 }
 function minus() {
   score--;
   document.querySelector("#score").textContent = score;
   newGame();
-  document.querySelector("#wrong").style.display = "block";
-  setTimeout(() => {
-    document.querySelector("#wrong").style.display = "none";
-  }, 200);
+  document.querySelector("#score").style.color = "red";
 }
