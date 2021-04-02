@@ -35,6 +35,10 @@ function newGame() {
 
   let obj = getBout();
 
+  if (obj.eventDate === "") {
+    obj.eventDate = "No Date";
+  }
+
   container.textContent = obj.eventDate;
 
   let winner = document.querySelector("#winner");
@@ -76,6 +80,7 @@ function plus() {
   }
 }
 function minus() {
+  score--;
   score--;
   score--;
   let wrong = document.querySelector("#wrong");
