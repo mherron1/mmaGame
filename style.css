@@ -26,22 +26,20 @@ body {
 }
 
 h1 {
-  margin: 10px;
+  margin: 25px;
 }
 
 #container {
-  margin-top: 25px;
+  margin-top: 150px;
   font-size: 30px;
   text-align: center;
   font-family: arial;
+  transform: translateY(0px);
 }
 
-@media only screen and (min-height: 360px) {
+@media only screen and (max-height: 568px) {
   #container {
-    transform: translateY(125px);
-  }
-  .items {
-    transform: translateY(125px);
+    margin-top: px;
   }
 }
 
@@ -64,7 +62,8 @@ h1 {
   max-width: 150px;
   background-color: rgb(241, 241, 241);
   border: 2px solid black;
-  padding: 10px;
+  transform: translateY(0px);
+  padding: 5px;
 }
 .items:hover {
   background-color: rgb(197, 232, 255);
@@ -73,13 +72,13 @@ h1 {
 #winner {
   text-align: center;
   font-size: 20px;
-  line-height: 45px;
+  line-height: 30px;
 }
 
 #loser {
   text-align: center;
   font-size: 20px;
-  line-height: 45px;
+  line-height: 30px;
 }
 
 #winner:hover {
@@ -95,7 +94,18 @@ h1 {
   text-align: center;
   margin-top: 30px;
   display: none;
-  font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+  #score {
+    background-color: #151515;
+    border: 1px solid white;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    margin-bottom: 20px;
+    line-height: 140px;
+  }
 }
 
 #button {
@@ -115,20 +125,20 @@ h1 {
 }
 
 #wrong {
-  font-size: 80px;
+  font-size: 60px;
   position: absolute;
-  top: 40%;
-  left: 85%;
+  top: 45%;
+  left: 80%;
   transform: translateX(-50%);
   color: rgba(255, 0, 0, 0.6);
   display: none;
 }
 
 #right {
-  font-size: 80px;
+  font-size: 60px;
   position: absolute;
-  top: 40%;
-  left: 85%;
+  top: 45%;
+  left: 80%;
   transform: translateX(-50%);
   color: rgba(79, 187, 115, 0.6);
   display: none;

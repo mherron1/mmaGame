@@ -1,5 +1,7 @@
 let score = 0;
 
+console.log(array.length);
+
 winText = [
   "Hey Dana! sixty g's baby!!",
   "I'm not surprised M***** F*****!",
@@ -84,7 +86,7 @@ function minus() {
 
   document.querySelector("#score").textContent = score;
   newGame();
-  if (score < -4) {
+  if (score < -9) {
     document.querySelector("#score").style.display = "none";
     document.querySelector("#fighters").style.visibility = "hidden";
     document.querySelector("#container").style.display = "none";
