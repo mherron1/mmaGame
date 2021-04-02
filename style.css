@@ -29,6 +29,19 @@ h1 {
   margin: 25px;
 }
 
+#twitter {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-height: 675px) {
+  #twitter {
+    display: none;
+  }
+}
+
 #container {
   margin-top: 80px;
   font-size: 30px;
@@ -63,6 +76,7 @@ h1 {
   background-color: rgb(230, 230, 230);
   transform: translateY(0px);
   padding: 5px;
+  margin: 5px;
 }
 .items:hover {
   background-color: rgb(218, 218, 218);
@@ -206,4 +220,10 @@ h1 {
   #lose {
     color: black;
   }
+}
+
+.social {
+  max-height: 40px;
+  margin: 5px;
+  border-radius: 3px;
 }
