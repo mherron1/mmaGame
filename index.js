@@ -21,6 +21,7 @@ function getBout() {
 }
 
 function newGame() {
+  document.querySelector("#mode").style.visibility = "hidden";
   document.querySelector("#lose").style.display = "none";
   document.querySelector("#win").style.display = "none";
   document.querySelector("#container").style.display = "block";
@@ -57,31 +58,66 @@ function newGame() {
 }
 
 function plus() {
-  score++;
   let right = document.querySelector("#right");
+
+  score++;
   right.style.display = "block";
   setTimeout(() => {
     right.style.display = "none";
   }, 400);
   document.querySelector("#score").textContent = score;
   newGame();
-  if (score > 4) {
-    document.querySelector("#score").style.display = "none";
-    document.querySelector("#fighters").style.visibility = "hidden";
-    document.querySelector("#container").style.display = "none";
-    document.querySelector("#button").style.display = "block";
-    score = 0;
-    document.querySelector("#win").innerHTML = `
-    <div>Congratulations!</div>
-    <div>${winText[Math.floor(Math.random() * 4)]}<div>`;
-    document.querySelector("#win").style.display = "block";
+  var e = document.getElementById("mode");
+  var strUser = e.value;
+
+  if (strUser === "Champ shit only") {
+    if (score > 9) {
+      document.querySelector("#score").style.display = "none";
+      document.querySelector("#fighters").style.visibility = "hidden";
+      document.querySelector("#container").style.display = "none";
+      document.querySelector("#button").style.display = "block";
+      score = 0;
+      document.querySelector("#win").innerHTML = `
+      <div>Congratulations!</div>
+      <div>${winText[Math.floor(Math.random() * 4)]}<div>`;
+      document.querySelector("#win").style.display = "block";
+      document.querySelector("#mode").style.visibility = "visible";
+    }
+  } else {
+    if (score > 4) {
+      document.querySelector("#score").style.display = "none";
+      document.querySelector("#fighters").style.visibility = "hidden";
+      document.querySelector("#container").style.display = "none";
+      document.querySelector("#button").style.display = "block";
+      score = 0;
+      document.querySelector("#win").innerHTML = `
+      <div>Congratulations!</div>
+      <div>${winText[Math.floor(Math.random() * 4)]}<div>`;
+      document.querySelector("#win").style.display = "block";
+      document.querySelector("#mode").style.visibility = "visible";
+    }
   }
 }
 function minus() {
-  score--;
-  score--;
-
   let wrong = document.querySelector("#wrong");
+  var e = document.getElementById("mode");
+  var strUser = e.value;
+
+  if (strUser === "Casual Mode") {
+    console.log(strUser);
+    score--;
+    wrong.textContent = "-1";
+  } else if (strUser === "Regular Mode") {
+    score--;
+    score--;
+    wrong.textContent = "-2";
+  } else {
+    score--;
+    score--;
+    score--;
+    wrong.textContent = "-3";
+  }
+
   wrong.style.display = "block";
   setTimeout(() => {
     wrong.style.display = "none";
@@ -99,5 +135,39 @@ function minus() {
     <div>Game Over!</div>
     <div>${loseText[Math.floor(Math.random() * 4)]}<div>`;
     document.querySelector("#lose").style.display = "block";
+    document.querySelector("#mode").style.visibility = "visible";
+  }
+}
+
+function setGameLevel() {
+  var e = document.getElementById("mode");
+  var strUser = e.value;
+
+  let inst = document.querySelector("#instructions");
+  if (strUser === "Champ shit only") {
+    console.log(strUser);
+
+    inst.innerHTML = `
+      <div>Select fight winner</div>
+      <div>Negative 3 for wrong answer</div>
+      <div>+10 to win</div>
+      <div>-5 = confirmed casual</div>
+    `;
+  } else if (strUser === "Regular Mode") {
+    console.log(strUser);
+    inst.innerHTML = `
+    <div>Select fight winner</div>
+    <div>Negative 2 for wrong answer</div>
+    <div>+5 to win</div>
+    <div>-5 = confirmed casual</div>
+  `;
+  } else {
+    console.log(strUser);
+    inst.innerHTML = `
+    <div>Select fight winner</div>
+    <div>Negative 1 for wrong answer</div>
+    <div>+5 to win</div>
+    <div>-5 = confirmed casual</div>
+  `;
   }
 }

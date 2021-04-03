@@ -27,6 +27,7 @@ body {
 
 h1 {
   margin: 25px;
+  margin-top: 40px;
 }
 
 #twitter {
@@ -226,4 +227,19 @@ h1 {
   max-height: 45px;
   margin: 5px;
   border-radius: 3px;
+}
+
+#mode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  border: none;
+}
+
+#mode:active {
+  border: none;
+}
+#mode:hover {
+  border: none;
 }
