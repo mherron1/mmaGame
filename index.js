@@ -107,11 +107,10 @@ function minus() {
   var e = document.getElementById("mode");
   var strUser = e.value;
 
-  if (strUser === "Casual Mode") {
-    console.log(strUser);
+  if (strUser === "Easy") {
     score--;
     wrong.textContent = "-1";
-  } else if (strUser === "Regular Mode") {
+  } else if (strUser === "Regular") {
     score--;
     score--;
     wrong.textContent = "-2";
@@ -144,26 +143,18 @@ function minus() {
 }
 
 function setGameLevel() {
-  score = 0;
-  document.querySelector("#score").style.display = "none";
-  document.querySelector("#fighters").style.visibility = "hidden";
-  document.querySelector("#container").style.display = "none";
-  document.querySelector("#button").style.display = "block";
   var e = document.getElementById("mode");
   var strUser = e.value;
 
   let inst = document.querySelector("#instructions");
-  if (strUser === "Champ shit only") {
-    console.log(strUser);
-
+  if (strUser === "Expert") {
     inst.innerHTML = `
       <div>Select fight winner</div>
       <div>Incorrect = -3</div>
       <div>+10 to win</div>
       <div>-5 = confirmed casual</div>
     `;
-  } else if (strUser === "Regular Mode") {
-    console.log(strUser);
+  } else if (strUser === "Regular") {
     inst.innerHTML = `
     <div>Select fight winner</div>
     <div>Incorrect = -2</div>
@@ -171,7 +162,6 @@ function setGameLevel() {
     <div>-5 = confirmed casual</div>
   `;
   } else {
-    console.log(strUser);
     inst.innerHTML = `
     <div>Select fight winner</div>
     <div>Incorrect = -1</div>
@@ -179,4 +169,9 @@ function setGameLevel() {
     <div>-5 = confirmed casual</div>
   `;
   }
+  score = 0;
+  document.querySelector("#score").style.display = "none";
+  document.querySelector("#fighters").style.visibility = "hidden";
+  document.querySelector("#container").style.display = "none";
+  document.querySelector("#button").style.display = "block";
 }

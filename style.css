@@ -27,7 +27,7 @@ body {
 
 h1 {
   margin: 25px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 #twitter {
@@ -279,5 +279,9 @@ select {
     width: 100px;
     line-height: 100px;
     margin: 20px auto;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 50px;
   }
 }
