@@ -58,7 +58,7 @@ function newGame() {
   document.querySelector("#button").style.display = "none";
   setTimeout(() => {
     document.querySelector("#fighters").style.display = "flex";
-  }, 100);
+  }, 300);
 }
 
 function plus() {
@@ -68,7 +68,7 @@ function plus() {
   right.style.display = "block";
   setTimeout(() => {
     right.style.display = "none";
-  }, 400);
+  }, 250);
   document.querySelector("#score").textContent = score;
   newGame();
   var e = document.getElementById("mode");
@@ -124,7 +124,7 @@ function minus() {
   wrong.style.display = "block";
   setTimeout(() => {
     wrong.style.display = "none";
-  }, 400);
+  }, 250);
 
   document.querySelector("#score").textContent = score;
   newGame();
