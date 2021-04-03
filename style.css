@@ -131,7 +131,7 @@ h1 {
   padding: 15px;
   position: absolute;
   left: 50%;
-  bottom: 20%;
+  bottom: 15%;
   transform: translateX(-50%);
 }
 
@@ -190,6 +190,12 @@ h1 {
 @media only screen and (min-width: 500px) {
   h1 {
     font-size: 50px;
+  }
+  #right {
+    font-size: 150px;
+  }
+  #wrong {
+    font-size: 150px;
   }
   #winner {
     font-size: 25px;
