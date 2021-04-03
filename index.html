@@ -20,6 +20,8 @@
 </head>
 <body>
 
+    <div id="headColor"></div>
+
     <center><h1>UFC Casual Detector</h3></center>
 
     <div>
@@ -33,7 +35,7 @@
 
 
     <div id="instructions">
-        <div>Select fight winner</div>
+        <div><strong>Select fight winner</strong></div>
         <div id="blue">Incorrect = -1</div>
         <div>+5 to win</div>
         <div>-5 = confirmed casual</div>
@@ -61,6 +63,8 @@
     </div>
 
     <button id="button" onclick="newGame()">New Game</button>
+
+    <p id="restartButton" onclick="setGameLevel()"> Restart </p>
 
 </body>
 </html>

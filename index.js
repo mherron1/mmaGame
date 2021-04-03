@@ -21,7 +21,6 @@ function getBout() {
 }
 
 function newGame() {
-  document.querySelector("#mode").style.visibility = "hidden";
   document.querySelector("#lose").style.display = "none";
   document.querySelector("#win").style.display = "none";
   document.querySelector("#container").style.display = "block";
@@ -140,6 +139,11 @@ function minus() {
 }
 
 function setGameLevel() {
+  score = 0;
+  document.querySelector("#score").style.display = "none";
+  document.querySelector("#fighters").style.visibility = "hidden";
+  document.querySelector("#container").style.display = "none";
+  document.querySelector("#button").style.display = "block";
   var e = document.getElementById("mode");
   var strUser = e.value;
 
