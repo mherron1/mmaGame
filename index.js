@@ -47,6 +47,33 @@ function newGame() {
       fighters.style["flex-direction"] = "row";
     }
   }
+  n = Math.floor(Math.random() * 9);
+  if (n % 2 === 0) {
+    let fighters = document.querySelector("#fighters");
+    if (fighters.style["flex-direction"] === "row") {
+      fighters.style["flex-direction"] = "row-reverse";
+    } else {
+      fighters.style["flex-direction"] = "row";
+    }
+  }
+  n = Math.floor(Math.random() * 9);
+  if (n % 2 === 0) {
+    let fighters = document.querySelector("#fighters");
+    if (fighters.style["flex-direction"] === "row") {
+      fighters.style["flex-direction"] = "row-reverse";
+    } else {
+      fighters.style["flex-direction"] = "row";
+    }
+  }
+  n = Math.floor(Math.random() * 9);
+  if (n % 2 === 0) {
+    let fighters = document.querySelector("#fighters");
+    if (fighters.style["flex-direction"] === "row") {
+      fighters.style["flex-direction"] = "row-reverse";
+    } else {
+      fighters.style["flex-direction"] = "row";
+    }
+  }
   document.querySelector("#lose").style.display = "none";
   document.querySelector("#win").style.display = "none";
   document.querySelector("#container").style.display = "block";
