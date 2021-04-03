@@ -149,7 +149,7 @@ function setGameLevel() {
 
     inst.innerHTML = `
       <div>Select fight winner</div>
-      <div>Negative 3 for wrong answer</div>
+      <div>Incorrect = -3</div>
       <div>+10 to win</div>
       <div>-5 = confirmed casual</div>
     `;
@@ -157,7 +157,7 @@ function setGameLevel() {
     console.log(strUser);
     inst.innerHTML = `
     <div>Select fight winner</div>
-    <div>Negative 2 for wrong answer</div>
+    <div>Incorrect = -2</div>
     <div>+5 to win</div>
     <div>-5 = confirmed casual</div>
   `;
@@ -165,7 +165,7 @@ function setGameLevel() {
     console.log(strUser);
     inst.innerHTML = `
     <div>Select fight winner</div>
-    <div>Negative 1 for wrong answer</div>
+    <div>Incorrect = -1</div>
     <div>+5 to win</div>
     <div>-5 = confirmed casual</div>
   `;
