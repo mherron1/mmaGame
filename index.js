@@ -37,6 +37,7 @@ function newGame() {
 
   let loser = document.querySelector("#loser");
   loser.textContent = obj.loser;
+  document.querySelector("#fighters").style.display = "none";
 
   let n = Math.floor(Math.random() * 9);
   if (n % 2 === 0) {
@@ -47,33 +48,7 @@ function newGame() {
       fighters.style["flex-direction"] = "row";
     }
   }
-  n = Math.floor(Math.random() * 9);
-  if (n % 2 === 0) {
-    let fighters = document.querySelector("#fighters");
-    if (fighters.style["flex-direction"] === "row") {
-      fighters.style["flex-direction"] = "row-reverse";
-    } else {
-      fighters.style["flex-direction"] = "row";
-    }
-  }
-  n = Math.floor(Math.random() * 9);
-  if (n % 2 === 0) {
-    let fighters = document.querySelector("#fighters");
-    if (fighters.style["flex-direction"] === "row") {
-      fighters.style["flex-direction"] = "row-reverse";
-    } else {
-      fighters.style["flex-direction"] = "row";
-    }
-  }
-  n = Math.floor(Math.random() * 9);
-  if (n % 2 === 0) {
-    let fighters = document.querySelector("#fighters");
-    if (fighters.style["flex-direction"] === "row") {
-      fighters.style["flex-direction"] = "row-reverse";
-    } else {
-      fighters.style["flex-direction"] = "row";
-    }
-  }
+
   document.querySelector("#lose").style.display = "none";
   document.querySelector("#win").style.display = "none";
   document.querySelector("#container").style.display = "block";
@@ -81,6 +56,9 @@ function newGame() {
   document.querySelector("#fighters").style.visibility = "visible";
   document.querySelector("#score").style.display = "block";
   document.querySelector("#button").style.display = "none";
+  setTimeout(() => {
+    document.querySelector("#fighters").style.display = "flex";
+  }, 100);
 }
 
 function plus() {

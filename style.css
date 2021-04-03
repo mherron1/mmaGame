@@ -44,7 +44,7 @@ h1 {
 }
 
 #container {
-  margin-top: 80px;
+  margin-top: 50px;
   font-size: 30px;
   text-align: center;
   font-family: arial;
@@ -205,7 +205,7 @@ h1 {
   }
   #container {
     font-size: 30px;
-    margin-top: 100px;
+    margin-top: 60px;
   }
   #instructions {
     font-size: 25px;
