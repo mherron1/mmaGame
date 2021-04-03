@@ -21,13 +21,6 @@ function getBout() {
 }
 
 function newGame() {
-  document.querySelector("#lose").style.display = "none";
-  document.querySelector("#win").style.display = "none";
-  document.querySelector("#container").style.display = "block";
-  document.querySelector("#score").textContent = score;
-  document.querySelector("#fighters").style.visibility = "visible";
-  document.querySelector("#score").style.display = "block";
-  document.querySelector("#button").style.display = "none";
   let container = document.querySelector("#container");
   container.innerHTML = "";
 
@@ -54,6 +47,13 @@ function newGame() {
       fighters.style["flex-direction"] = "row";
     }
   }
+  document.querySelector("#lose").style.display = "none";
+  document.querySelector("#win").style.display = "none";
+  document.querySelector("#container").style.display = "block";
+  document.querySelector("#score").textContent = score;
+  document.querySelector("#fighters").style.visibility = "visible";
+  document.querySelector("#score").style.display = "block";
+  document.querySelector("#button").style.display = "none";
 }
 
 function plus() {
