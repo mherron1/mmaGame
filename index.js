@@ -84,7 +84,7 @@ function plus() {
       document.querySelector("#win").innerHTML = `
       <div>Congratulations!</div>
       <div>${winText[Math.floor(Math.random() * 4)]}<div>
-      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Can you pass the Casual Detector?" data-url="https://www.casual-detector.com/" data-hashtags="mmatwitter" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
+      <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=>Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
     }
@@ -98,7 +98,7 @@ function plus() {
       document.querySelector("#win").innerHTML = `
       <div>Congratulations!</div>
       <div>${winText[Math.floor(Math.random() * 4)]}<div>
-      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Can you pass the Casual Detector?" data-url="https://www.casual-detector.com/" data-hashtags="mmatwitter" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
+      <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=>Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
     }
@@ -139,7 +139,7 @@ function minus() {
     document.querySelector("#lose").innerHTML = `
     <div>Game Over!</div>
     <div>${loseText[Math.floor(Math.random() * 4)]}<div>
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Can you pass the Casual Detector?" data-url="https://www.casual-detector.com/" data-hashtags="mmatwitter" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
+    <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=>Share</a> `;
     document.querySelector("#lose").style.display = "block";
     document.querySelector("#mode").style.visibility = "visible";
   }
