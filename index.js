@@ -65,7 +65,7 @@ function plus() {
   }, 400);
   document.querySelector("#score").textContent = score;
   newGame();
-  if (score > 9) {
+  if (score > 4) {
     document.querySelector("#score").style.display = "none";
     document.querySelector("#fighters").style.visibility = "hidden";
     document.querySelector("#container").style.display = "none";
@@ -80,7 +80,7 @@ function plus() {
 function minus() {
   score--;
   score--;
-  score--;
+
   let wrong = document.querySelector("#wrong");
   wrong.style.display = "block";
   setTimeout(() => {
@@ -89,7 +89,7 @@ function minus() {
 
   document.querySelector("#score").textContent = score;
   newGame();
-  if (score < -9) {
+  if (score < -4) {
     document.querySelector("#score").style.display = "none";
     document.querySelector("#fighters").style.visibility = "hidden";
     document.querySelector("#container").style.display = "none";
