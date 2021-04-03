@@ -231,9 +231,11 @@ h1 {
 #mode {
   position: absolute;
   top: 0;
-  left: 0;
-  font-size: 22px;
+  right: 0;
+  font-size: 25px;
   border: none;
+  background-color: rgb(151, 0, 0);
+  color: white;
 }
 
 #mode:active {
