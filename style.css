@@ -291,3 +291,7 @@ select {
     margin-top: 50px;
   }
 }
+
+a {
+  color: lightskyblue;
+}

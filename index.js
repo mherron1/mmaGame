@@ -83,7 +83,8 @@ function plus() {
       score = 0;
       document.querySelector("#win").innerHTML = `
       <div>Congratulations!</div>
-      <div>${winText[Math.floor(Math.random() * 4)]}<div>`;
+      <div>${winText[Math.floor(Math.random() * 4)]}<div>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Can you beat the UFC Casual Detector?" data-hashtags="mmatwitter" data-show-count="false">Share</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
     }
@@ -96,7 +97,8 @@ function plus() {
       score = 0;
       document.querySelector("#win").innerHTML = `
       <div>Congratulations!</div>
-      <div>${winText[Math.floor(Math.random() * 4)]}<div>`;
+      <div>${winText[Math.floor(Math.random() * 4)]}<div>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Can you beat the UFC Casual Detector?" data-hashtags="mmatwitter" data-show-count="false">Share</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
     }
@@ -136,7 +138,8 @@ function minus() {
     score = 0;
     document.querySelector("#lose").innerHTML = `
     <div>Game Over!</div>
-    <div>${loseText[Math.floor(Math.random() * 4)]}<div>`;
+    <div>${loseText[Math.floor(Math.random() * 4)]}<div>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Can you beat the UFC Casual Detector?" data-hashtags="mmatwitter" data-show-count="false">Share</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
     document.querySelector("#lose").style.display = "block";
     document.querySelector("#mode").style.visibility = "visible";
   }
