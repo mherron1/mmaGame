@@ -22,9 +22,9 @@ loseText = [
 ];
 
 function getBout() {
-  let num = Math.floor(Math.random() * (array.length - 1));
+  let num = Math.floor(Math.random() * (bouts.length - 1));
 
-  return array[num];
+  return bouts[num];
 }
 
 function newGame() {

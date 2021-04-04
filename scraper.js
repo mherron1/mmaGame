@@ -444,6 +444,7 @@ function getResults(url) {
             eventDate: eventDate,
             weight: x[i].childNodes[1].innerText,
             winner: x[i].childNodes[3].innerText,
+            result: x[i].childNodes[5].innerText,
             loser: x[i].childNodes[7].innerText,
           };
 
