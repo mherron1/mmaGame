@@ -1,3 +1,10 @@
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/service_worker.js")
+    .then((reg) => console.log())
+    .catch((err) => console.log());
+}
+
 let score = 0;
 
 winText = [
