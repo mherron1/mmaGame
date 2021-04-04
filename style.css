@@ -160,9 +160,13 @@ h1 {
 }
 
 #win {
+  text-align: center;
   position: fixed;
-  font-size: 30px;
-  padding: 30px;
+  width: 100%;
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
@@ -175,6 +179,8 @@ h1 {
   width: 100%;
   font-size: 25px;
   padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);

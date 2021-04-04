@@ -36,6 +36,7 @@ function newGame() {
   if (obj.eventDate === "") {
     obj.eventDate = "No Date";
   }
+  console.table(obj);
 
   container.textContent = obj.eventDate;
 
@@ -89,7 +90,7 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       score = 0;
       document.querySelector("#win").innerHTML = `
-      <div>Congratulations!</div>
+      <div>Congratulations!</div> 
       <div>${winText[Math.floor(Math.random() * 4)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
@@ -103,7 +104,7 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       score = 0;
       document.querySelector("#win").innerHTML = `
-      <div>Congratulations!</div>
+      <div>Congratulations!</div> 
       <div>${winText[Math.floor(Math.random() * 4)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
