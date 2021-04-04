@@ -1,5 +1,12 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target" : { "namespace": "android_app", "package_name": "com.casual_detector.www.twa",
-                   "sha256_cert_fingerprints": ["BA:04:96:E2:BA:8B:B4:63:69:E5:BF:15:82:DA:C0:36:B1:39:93:EC:39:37:99:C3:D2:8B:35:B4:D4:67:85:63"] }
-    }]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.casual_detector.www.twa",
+      "sha256_cert_fingerprints": [
+        "26:12:1C:19:6C:3F:06:34:E5:3A:02:6A:B2:25:8F:4F:3F:D8:FB:25:03:3A:76:57:B5:5E:9A:B9:40:CC:A5:30"
+      ]
+    }
+  }
+]
