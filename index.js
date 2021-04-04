@@ -12,6 +12,8 @@ winText = [
   "I'm not surprised M***** F*****!",
   "Conceive, believe, achieve",
   "You are Michael Jordan-esque in your UFC knowledge!",
+  "Much heespec",
+  "Thats my boy!!!!!!",
 ];
 
 loseText = [
@@ -19,6 +21,7 @@ loseText = [
   "I am not impressed by your performance.",
   "Your finger was a balloooon!",
   "This number one bullshit.",
+  "Hey guys! get a load of this casual over here!",
 ];
 
 function getBout() {
@@ -90,8 +93,8 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       score = 0;
       document.querySelector("#win").innerHTML = `
-      <div>Congratulations!</div> 
-      <div>${winText[Math.floor(Math.random() * 4)]}<div>
+      <div>You win!</div> 
+      <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
@@ -104,8 +107,8 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       score = 0;
       document.querySelector("#win").innerHTML = `
-      <div>Congratulations!</div> 
-      <div>${winText[Math.floor(Math.random() * 4)]}<div>
+      <div>You win!</div> 
+      <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
@@ -146,7 +149,7 @@ function minus() {
     score = 0;
     document.querySelector("#lose").innerHTML = `
     <div>Game Over!</div>
-    <div>${loseText[Math.floor(Math.random() * 4)]}<div>
+    <div>${loseText[Math.floor(Math.random() * 5)]}<div>
     <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
     document.querySelector("#lose").style.display = "block";
     document.querySelector("#mode").style.visibility = "visible";
