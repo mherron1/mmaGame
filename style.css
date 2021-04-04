@@ -295,3 +295,9 @@ select {
 a {
   color: lightskyblue;
 }
+
+@media only screen and (max-width: 500px) {
+  .items {
+    background-color: white;
+  }
+}
