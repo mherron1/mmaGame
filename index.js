@@ -74,7 +74,7 @@ function plus() {
   var e = document.getElementById("mode");
   var strUser = e.value;
 
-  if (strUser === "Champ shit only") {
+  if (strUser === "Expert") {
     if (score > 9) {
       document.querySelector("#score").style.display = "none";
       document.querySelector("#fighters").style.visibility = "hidden";
