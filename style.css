@@ -313,3 +313,21 @@ a {
     background-color: white;
   }
 }
+
+.green {
+  color: rgb(44, 180, 44);
+}
+
+.red {
+  color: rgb(255, 136, 136);
+}
+
+@media only screen and (min-width: 500px) {
+  .green {
+    color: rgb(3, 139, 3);
+  }
+
+  .red {
+    color: rgb(194, 10, 10);
+  }
+}

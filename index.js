@@ -8,6 +8,7 @@ if ("serviceWorker" in navigator) {
 let score = 0;
 let moves = 0;
 let correct = 0;
+let percentage = "";
 
 winText = [
   "Hey Dana! sixty g's baby!!",
@@ -94,9 +95,10 @@ function plus() {
       document.querySelector("#fighters").style.visibility = "hidden";
       document.querySelector("#container").style.display = "none";
       document.querySelector("#button").style.display = "block";
+      percentage = parseInt((correct / moves) * 100);
 
       document.querySelector("#win").innerHTML = `
-      <div>Score: ${score}</div><div>  Accurracy: ${percentge}% (${correct}/${moves})</div>
+      <div>Score: <span class="green">+${score}</span></div><div>Accurracy: <span class="green">${percentage}% (${correct}/${moves})</span></div>
       <br>
       <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
@@ -112,8 +114,9 @@ function plus() {
       document.querySelector("#fighters").style.visibility = "hidden";
       document.querySelector("#container").style.display = "none";
       document.querySelector("#button").style.display = "block";
+      percentage = parseInt((correct / moves) * 100);
       document.querySelector("#win").innerHTML = `
-      <div>Score: ${score}</div><div>  Accurracy: ${percentge}% (${correct}/${moves})</div>
+      <div> Score: <span class="green">+${score}</span></div><div>  Accurracy: <span class="green">${percentage}% (${correct}/${moves})</span></div>
       <br>
       <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
@@ -158,9 +161,9 @@ function minus() {
     document.querySelector("#container").style.display = "none";
     document.querySelector("#button").style.display = "block";
 
-    let percentge = parseInt((correct / moves) * 100);
+    percentage = parseInt((correct / moves) * 100);
     document.querySelector("#lose").innerHTML = `
-    <div>Score: ${score}</div><div> Accurracy: ${percentge}% (${correct}/${moves})</div>
+    <div> Score: <span class="red">${score}</span></div><div> Accurracy: <span class="red"> ${percentage}% (${correct}/${moves})</span></div>
     <br>
     <div>${loseText[Math.floor(Math.random() * 5)]}<div>
     <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
