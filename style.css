@@ -306,4 +306,7 @@ a {
   .items {
     background-color: white;
   }
+  .items:hover {
+    background-color: white;
+  }
 }

@@ -6,6 +6,8 @@ if ("serviceWorker" in navigator) {
 }
 
 let score = 0;
+let moves = 0;
+let correct = 0;
 
 winText = [
   "Hey Dana! sixty g's baby!!",
@@ -39,7 +41,6 @@ function newGame() {
   if (obj.eventDate === "") {
     obj.eventDate = "No Date";
   }
-  console.table(obj);
 
   container.textContent = obj.eventDate;
 
@@ -73,6 +74,8 @@ function newGame() {
 }
 
 function plus() {
+  correct++;
+  moves++;
   let right = document.querySelector("#right");
 
   score++;
@@ -93,11 +96,14 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       score = 0;
       document.querySelector("#win").innerHTML = `
+      <div>correct asnwers: ${correct}/${moves}</div>
       <div>You win!</div> 
       <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
+      correct = 0;
+      moves = 0;
     }
   } else {
     if (score > 4) {
@@ -107,15 +113,19 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       score = 0;
       document.querySelector("#win").innerHTML = `
+      <div>correct asnwers: ${correct}/${moves}</div>
       <div>You win!</div> 
       <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
+      correct = 0;
+      moves = 0;
     }
   }
 }
 function minus() {
+  moves++;
   let wrong = document.querySelector("#wrong");
   var e = document.getElementById("mode");
   var strUser = e.value;
@@ -147,12 +157,16 @@ function minus() {
     document.querySelector("#container").style.display = "none";
     document.querySelector("#button").style.display = "block";
     score = 0;
+    let percentge = parseInt((correct / moves) * 100);
     document.querySelector("#lose").innerHTML = `
+    <div>Accurracy: ${percentge}% (${correct}/${moves})</div>
     <div>Game Over!</div>
     <div>${loseText[Math.floor(Math.random() * 5)]}<div>
     <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
     document.querySelector("#lose").style.display = "block";
     document.querySelector("#mode").style.visibility = "visible";
+    correct = 0;
+    moves = 0;
   }
 }
 
@@ -184,6 +198,8 @@ function setGameLevel() {
   `;
   }
   score = 0;
+  correct = 0;
+  moves = 0;
   document.querySelector("#score").style.display = "none";
   document.querySelector("#fighters").style.visibility = "hidden";
   document.querySelector("#container").style.display = "none";
