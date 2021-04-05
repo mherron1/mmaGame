@@ -5,6 +5,17 @@ if ("serviceWorker" in navigator) {
     .catch((err) => console.log());
 }
 
+if (typeof Storage !== "undefined") {
+  // Store
+  if (localStorage.getItem("highScore") === null) {
+    localStorage.setItem("highScore", "0");
+  }
+  // Retrieve
+  console.log(localStorage.getItem("highScore"));
+} else {
+  console.log("web stprage not available");
+}
+
 let score = 0;
 let moves = 0;
 let correct = 0;
@@ -75,19 +86,31 @@ function newGame() {
 }
 
 function plus() {
+  var e = document.getElementById("mode");
+  var strUser = e.value;
+  let right = document.querySelector("#right");
+  if (strUser === "Easy") {
+    right.textContent = "+1";
+    score++;
+  } else if (strUser === "Regular") {
+    right.textContent = "+1";
+    score++;
+  } else if (strUser === "Survival Mode") {
+    right.textContent = " ✓";
+  } else {
+    right.textContent = "+1";
+    score++;
+  }
   correct++;
   moves++;
-  let right = document.querySelector("#right");
+  document.querySelector("#survivalScore").textContent = moves;
 
-  score++;
   right.style.display = "block";
   setTimeout(() => {
     right.style.display = "none";
   }, 250);
   document.querySelector("#score").textContent = score;
   newGame();
-  var e = document.getElementById("mode");
-  var strUser = e.value;
 
   if (strUser === "Expert") {
     if (score > 9) {
@@ -104,10 +127,11 @@ function plus() {
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
       document.querySelector("#mode").style.visibility = "visible";
-      score = 0;
       correct = 0;
       moves = 0;
+      document.querySelector("#survivalScore").textContent = moves;
     }
+  } else if (strUser === "Survival Mode") {
   } else {
     if (score > 4) {
       document.querySelector("#score").style.display = "none";
@@ -125,11 +149,13 @@ function plus() {
       score = 0;
       correct = 0;
       moves = 0;
+      document.querySelector("#survivalScore").textContent = moves;
     }
   }
 }
 function minus() {
   moves++;
+  document.querySelector("#survivalScore").textContent = moves;
   let wrong = document.querySelector("#wrong");
   var e = document.getElementById("mode");
   var strUser = e.value;
@@ -141,6 +167,11 @@ function minus() {
     score--;
     score--;
     wrong.textContent = "-2";
+  } else if (strUser === "Survival Mode") {
+    score--;
+    score--;
+    score--;
+    wrong.textContent = "-4";
   } else {
     score--;
     score--;
@@ -171,16 +202,59 @@ function minus() {
     document.querySelector("#mode").style.visibility = "visible";
     correct = 0;
     moves = 0;
+    document.querySelector("#survivalScore").textContent = moves;
     score = 0;
+  } else if (strUser === "Survival Mode") {
+    if (score < 1) {
+      document.querySelector("#score").style.display = "none";
+      document.querySelector("#fighters").style.visibility = "hidden";
+      document.querySelector("#container").style.display = "none";
+      document.querySelector("#button").style.display = "block";
+
+      percentage = parseInt((correct / moves) * 100);
+      document.querySelector("#lose").innerHTML = `
+        <div> Score: ${moves} </div>
+        <br>
+        <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
+      document.querySelector("#lose").style.display = "block";
+      document.querySelector("#mode").style.visibility = "visible";
+      let localHighScore = parseInt(localStorage.getItem("highScore"));
+      if (moves > localHighScore) {
+        localStorage.setItem("highScore", moves.toString());
+        localHighScore = parseInt(localStorage.getItem("highScore"));
+        document.querySelector("#newHighScore").style.display = "block";
+        setTimeout(() => {
+          document.querySelector("#newHighScore").style.display = "none";
+        }, 2500);
+        let inst = document.querySelector("#instructions");
+        inst.innerHTML = `
+        <div>Survive as long as you can!</div>
+        <br>
+        <div>Highest Score: <span id="yellow"> ${localStorage.getItem(
+          "highScore"
+        )}</span></div>
+  `;
+      }
+
+      score = 10;
+      correct = 0;
+      moves = 0;
+      document.querySelector("#survivalScore").textContent = moves;
+    }
   }
 }
 
 function setGameLevel() {
+  moves = 0;
+  document.querySelector("#survivalScore").textContent = moves;
   var e = document.getElementById("mode");
   var strUser = e.value;
 
   let inst = document.querySelector("#instructions");
   if (strUser === "Expert") {
+    document.querySelector("#survivalScore").style.display = "none";
+    document.querySelector("#score").style.display = "block";
+    score = 0;
     inst.innerHTML = `
       <div>Select fight winner</div>
       <div>Incorrect = -3</div>
@@ -188,13 +262,34 @@ function setGameLevel() {
       <div>-5 = confirmed casual</div>
     `;
   } else if (strUser === "Regular") {
+    document.querySelector("#survivalScore").style.display = "none";
+    document.querySelector("#score").style.display = "block";
+    score = 0;
     inst.innerHTML = `
     <div>Select fight winner</div>
     <div>Incorrect = -2</div>
     <div>+5 to win</div>
     <div>-5 = confirmed casual</div>
   `;
+  } else if (strUser === "Survival Mode") {
+    document.querySelector("#survivalScore").style.display = "block";
+    document.querySelector("#score").style.display = "block";
+    document.querySelector("#win").style.display = "none";
+    document.querySelector("#lose").style.display = "none";
+    score = 10;
+    document.querySelector("#score").style.width = "200px";
+
+    inst.innerHTML = `
+        <div>Survive as long as you can!</div>
+        <br>
+        <div>Highest Score: <span id="yellow"> ${localStorage.getItem(
+          "highScore"
+        )}</span></div>
+  `;
   } else {
+    document.querySelector("#survivalScore").style.display = "none";
+    document.querySelector("#score").style.display = "block";
+    score = 0;
     inst.innerHTML = `
     <div>Select fight winner</div>
     <div>Incorrect = -1</div>
@@ -202,7 +297,6 @@ function setGameLevel() {
     <div>-5 = confirmed casual</div>
   `;
   }
-  score = 0;
   correct = 0;
   moves = 0;
   document.querySelector("#score").style.display = "none";
