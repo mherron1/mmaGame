@@ -232,6 +232,9 @@ h1 {
   #lose {
     color: black;
   }
+  #result {
+    margin-top: 40px;
+  }
 }
 
 .social {

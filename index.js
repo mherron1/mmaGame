@@ -97,7 +97,7 @@ function plus() {
 
       document.querySelector("#win").innerHTML = `
       <div>Score: ${score}</div><div>  Accurracy: ${percentge}% (${correct}/${moves})</div>
-      <div>You win!</div> 
+      <br>
       <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
@@ -114,7 +114,7 @@ function plus() {
       document.querySelector("#button").style.display = "block";
       document.querySelector("#win").innerHTML = `
       <div>Score: ${score}</div><div>  Accurracy: ${percentge}% (${correct}/${moves})</div>
-      <div>You win!</div> 
+      <br>
       <div>${winText[Math.floor(Math.random() * 6)]}<div>
       <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
       document.querySelector("#win").style.display = "block";
@@ -161,7 +161,7 @@ function minus() {
     let percentge = parseInt((correct / moves) * 100);
     document.querySelector("#lose").innerHTML = `
     <div>Score: ${score}</div><div> Accurracy: ${percentge}% (${correct}/${moves})</div>
-    <div>Game Over!</div>
+    <br>
     <div>${loseText[Math.floor(Math.random() * 5)]}<div>
     <a href="https://twitter.com/intent/tweet?url=https://www.casual-detector.com/&text=">Share</a> `;
     document.querySelector("#lose").style.display = "block";
