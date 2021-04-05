@@ -171,7 +171,7 @@ function minus() {
     score--;
     score--;
     score--;
-    wrong.textContent = "-4";
+    wrong.textContent = "-3";
   } else {
     score--;
     score--;
