@@ -15,8 +15,8 @@ winText = [
   "I'm not surprised M***** F*****!",
   "Conceive, believe, achieve",
   "You are Michael Jordan-esque in your UFC knowledge!",
-  "Much heespec",
-  "Thats my boy!!!!!!",
+  "I havee very heespec fo you",
+  "I luuuuh you!!!!",
 ];
 
 loseText = [
